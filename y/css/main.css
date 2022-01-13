@@ -62,6 +62,16 @@ html {
   font-size: 10px;
 }
 
+.blog {
+  text-decoration: none; 
+   color: #ffffff;
+}
+
+.blog:hover {
+  color: #2681d6;
+  transition: all 0.3s ease-in-out;
+}
+
 @media only screen and (max-width:400px) {
   html {
     font-size: 9.411764705882353px;
