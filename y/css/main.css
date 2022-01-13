@@ -1434,7 +1434,7 @@ body.menu-is-open {
   line-height: 1.5;
   letter-spacing: -0.03rem;
   margin-top: 0;
-  margin-bottom: 4.8rem;
+  margin-bottom: 1.8rem;
 }
 
 .subhead {
@@ -3428,7 +3428,7 @@ html.no-csstransitions .home-content__main {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: .9;
+  opacity: .85;
   background-color: #111111;
 }
 
