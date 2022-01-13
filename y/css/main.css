@@ -3410,12 +3410,12 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-testimonials {
-  padding-top: 16.2rem;
-  padding-bottom: 21rem;
+  padding-top: 7.6rem;
+  padding-bottom: 23rem;
   text-align: center;
   position: relative;
-  background-image: url(../images/hero-bg.jpg);
-  background-repeat: no-repeat;
+  background-image: url(../images/kyle-sung-oQuP_XBjOMY-unsplash.jpg);
+  background-repeat: no-repeat; 
   background-position: center center;
   background-size: cover;
 }

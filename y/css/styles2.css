@@ -1,0 +1,1234 @@
+/* =================================================================== 
+ * Luther Main Stylesheet
+ * Template Ver. 1.0.0
+ * 02-15-2021
+ * ------------------------------------------------------------------
+ *
+ * TOC:
+ *
+ * # SETTINGS
+ *      ## fonts 
+ *      ## colors
+ *      ## spacing and typescale
+ *      ## grid variables
+ * # NORMALIZE
+ * # BASE SETUP
+ * # GRID
+ *      ## large screen devices 
+ *      ## medium screen devices 
+ *      ## tablet devices 
+ *      ## mobile devices 
+ *      ## small screen devices 
+ *      ## additional column stackpoints 
+ * # UTILITY CLASSES
+ * # TYPOGRAPHY 
+ *      ## base type styles
+ *      ## additional typography & helper classes
+ *      ## lists
+ *      ## spacing
+ * # PRELOADER
+ * # FORM
+ *      ## style placeholder text
+ *      ## change autocomplete styles in Chrome
+ * # BUTTONS
+ * # TABLE
+ * # COMPONENTS
+ *      ## pagination
+ *      ## alert box 
+ *      ## skillbars 
+ *      ## stats tabs
+ * # PROJECT-WIDE SHARED STYLES
+ *      ## media classes
+ *      ## theme-specific typography classes
+ *      ## MailtoUI style overrides
+ * # PAGE WRAP
+ *      ## circles
+ * # SITE HEADER
+ *      ## main navigation
+ *      ## mobile menu toggle
+ * # INTRO
+ *      ## intro social
+ *      ## intro scrolldown
+ * # ABOUT
+ *      ## about info
+ *      ## about expertise
+ *      ## about timelines
+ * # WORKS
+ *      ## works portfolio
+ *      ## modal popup
+ *      ## testimonials
+ *      ## testimonial slider 
+ * # CONTACT
+ * # FOOTER
+ *      ## copyright
+ *      ## go top
+ *
+ * ------------------------------------------------------------------ */
+
+
+/* ===================================================================
+ * # SETTINGS
+ *
+ *
+ * ------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------- 
+ * ## fonts 
+ * ------------------------------------------------------------------- */
+ @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Serif+Text:ital@0;1&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+ :root {
+ 
+     --font-1 : "Public Sans", sans-serif;
+     --font-2 : "DM Serif Display", serif;
+ 
+     /* monospace
+     */
+     --font-mono : Consolas, "Andale Mono", Courier, "Courier New", monospace;
+ }
+ 
+ /* ------------------------------------------------------------------- 
+  * ## colors
+  * ------------------------------------------------------------------- */
+ :root {
+ 
+     /* color-1(#eabe7c)
+      * color-2(#23967f)
+      */
+     --color-1 : hsla(36, 72%, 70%, 1);
+     --color-2 : hsla(168, 62%, 36%, 1);
+ 
+     /* theme color variations
+      */
+     --color-1-lighter : hsla(36, 72%, 90%, 1);
+     --color-1-light   : hsla(36, 72%, 80%, 1);
+     --color-1-dark    : hsla(36, 72%, 60%, 1);
+     --color-1-darker  : hsla(36, 72%, 50%, 1);
+     --color-2-lighter : hsla(168, 62%, 56%, 1);
+     --color-2-light   : hsla(168, 62%, 46%, 1);
+     --color-2-dark    : hsla(168, 62%, 26%, 1);
+     --color-2-darker  : hsla(168, 62%, 16%, 1);
+ 
+     /* feedback colors
+      * color-error(#ffd1d2), color-success(#c8e675), 
+      * color-info(#d7ecfb), color-notice(#fff099)
+      */
+     --color-error           : hsla(359, 100%, 91%, 1);
+     --color-success         : hsla(76, 69%, 68%, 1);
+     --color-info            : hsla(205, 82%, 91%, 1);
+     --color-notice          : hsla(51, 100%, 80%, 1);
+     --color-error-content   : hsla(359, 50%, 50%, 1);
+     --color-success-content : hsla(76, 29%, 28%, 1);
+     --color-info-content    : hsla(205, 32%, 31%, 1);
+     --color-notice-content  : hsla(51, 30%, 30%, 1);
+ 
+     /* shades 
+      * generated using 
+      * Tint & Shade Generator 
+      * (https://maketintsandshades.com/)
+      */
+     --color-black   : #000000;
+     --color-gray-19 : #020202;
+     --color-gray-18 : #040404;
+     --color-gray-17 : #060607;
+     --color-gray-16 : #080809;
+     --color-gray-15 : #0a0b0b;
+     --color-gray-14 : #0c0d0d;
+     --color-gray-13 : #0e0f0f;
+     --color-gray-12 : #101112;
+     --color-gray-11 : #121314;
+     --color-gray-10 : #141516;
+     --color-gray-9  : #2c2c2d;
+     --color-gray-8  : #434445;
+     --color-gray-7  : #5b5b5c;
+     --color-gray-6  : #727373;
+     --color-gray-5  : #8a8a8b;
+     --color-gray-4  : #a1a1a2;
+     --color-gray-3  : #b9b9b9;
+     --color-gray-2  : #d0d0d0;
+     --color-gray-1  : #e8e8e8;
+     --color-white   : #ffffff;
+ 
+     /* text
+      */
+     --color-text        : var(--color-gray-4);
+     --color-text-dark   : var(--color-white);
+     --color-text-light  : var(--color-gray-7);
+     --color-placeholder : var(--color-gray-7);
+ 
+     /* buttons
+      */
+     --color-btn                    : var(--color-gray-9);
+     --color-btn-text               : var(--color-1);
+     --color-btn-hover              : var(--color-white);
+     --color-btn-hover-text         : var(--color-black);
+     --color-btn-primary            : var(--color-1-dark);
+     --color-btn-primary-text       : var(--color-black);
+     --color-btn-primary-hover      : var(--color-1-darker);
+     --color-btn-primary-hover-text : var(--color-black);
+     --color-btn-stroke             : var(--color-white);
+     --color-btn-stroke-text        : var(--color-white);
+     --color-btn-stroke-hover       : var(--color-white);
+     --color-btn-stroke-hover-text  : var(--color-black);
+ 
+     /* preloader
+      */
+     --color-preloader-bg : var(--color-gray-10);
+     --color-loader       : white;
+     --color-loader-light : rgba(255, 255, 255, 0.1);
+ 
+     /* others
+      */
+     --color-body    : var(--color-gray-10);
+     --color-border  : rgba(255, 255, 255, .05);
+     --border-radius : 3px;
+ }
+ 
+ /* ------------------------------------------------------------------- 
+  * ## spacing and typescale
+  * ------------------------------------------------------------------- */
+ :root {
+ 
+     /* spacing
+      * base font size: 19px 
+      * vertical space unit : 32px
+      */
+     --base-size      : 62.5%;
+     --multiplier     : 1;
+     --base-font-size : calc(1.9rem * var(--multiplier));
+     --space          : calc(3.2rem * var(--multiplier));
+ 
+     /* vertical spacing 
+      */
+     --vspace-0_125 : calc(0.125 * var(--space));
+     --vspace-0_25  : calc(0.25 * var(--space));
+     --vspace-0_375 : calc(0.375 * var(--space));
+     --vspace-0_5   : calc(0.5 * var(--space));
+     --vspace-0_625 : calc(0.625 * var(--space));
+     --vspace-0_75  : calc(0.75 * var(--space));
+     --vspace-0_875 : calc(0.875 * var(--space));
+     --vspace-1     : calc(var(--space));
+     --vspace-1_25  : calc(1.25 * var(--space));
+     --vspace-1_5   : calc(1.5 * var(--space));
+     --vspace-1_75  : calc(1.75 * var(--space));
+     --vspace-2     : calc(2 * var(--space));
+     --vspace-2_5   : calc(2.5 * var(--space));
+     --vspace-3     : calc(3 * var(--space));
+     --vspace-3_5   : calc(3.5 * var(--space));
+     --vspace-4     : calc(4 * var(--space));
+     --vspace-4_5   : calc(4.5 * var(--space));
+     --vspace-5     : calc(5 * var(--space));
+ 
+     /* type scale
+      * ratio 1:2 | base: 19px
+      * -------------------------------------------------------
+      *
+      * --text-display-3 = (81.70px)
+      * --text-display-2 = (68.08px)
+      * --text-display-1 = (56.73px)
+      * --text-xxxl      = (47.28px)
+      * --text-xxl       = (39.40px)
+      * --text-xl        = (32.83px)
+      * --text-lg        = (27.36px)
+      * --text-md        = (22.80px)
+      * --text-size      = (19.00px) BASE
+      * --text-sm        = (15.83px)
+      * --text-xs        = (13.19px)
+      *
+      * ---------------------------------------------------------
+      */
+     --text-scale-ratio : 1.2;
+     --text-size        : var(--base-font-size);
+     --text-xs          : calc((var(--text-size) / var(--text-scale-ratio)) / var(--text-scale-ratio));
+     --text-sm          : calc(var(--text-xs) * var(--text-scale-ratio));
+     --text-md          : calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+     --text-lg          : calc(var(--text-md) * var(--text-scale-ratio));
+     --text-xl          : calc(var(--text-lg) * var(--text-scale-ratio));
+     --text-xxl         : calc(var(--text-xl) * var(--text-scale-ratio));
+     --text-xxxl        : calc(var(--text-xxl) * var(--text-scale-ratio));
+     --text-display-1   : calc(var(--text-xxxl) * var(--text-scale-ratio));
+     --text-display-2   : calc(var(--text-display-1) * var(--text-scale-ratio));
+     --text-display-3   : calc(var(--text-display-2) * var(--text-scale-ratio));
+ 
+     /* default button height
+      */
+     --vspace-btn : var(--vspace-2);
+ }
+ 
+ /* on mobile devices below 600px, change the value of '--multiplier' 
+  * to adjust the values of base font size and vertical space unit.
+  */
+ @media screen and (max-width: 600px) {
+     :root {
+         --multiplier : .875;
+     }
+ }
+ 
+ /* ------------------------------------------------------------------- 
+  * ## grid variables
+  * ------------------------------------------------------------------- */
+ :root {
+ 
+     /* widths for rows and containers
+      */
+     --width-full     : 100%;
+     --width-max      : 1200px;
+     --width-wide     : 1400px;
+     --width-wider    : 1600px;
+     --width-widest   : 1800px;
+     --width-narrow   : 1000px;
+     --width-narrower : 800px;
+     --width-grid-max : var(--width-max);
+ 
+     /* gutter
+      */
+     --gutter : 2rem;
+ }
+ 
+ /* on medium screen devices
+  */
+ @media screen and (max-width: 1200px) {
+     :root {
+         --gutter : 1.6rem;
+     }
+ }
+ 
+ /* on mobile devices
+  */
+ @media screen and (max-width: 600px) {
+     :root {
+         --gutter : 1rem;
+     }
+ }
+ 
+ 
+ 
+ /* ====================================================================
+  * # NORMALIZE
+  *
+  *
+  * --------------------------------------------------------------------
+  * normalize.css v8.0.1 | MIT License |
+  * github.com/necolas/normalize.css
+  * -------------------------------------------------------------------- */
+ 
+ html {
+     line-height              : 1.15;
+     -webkit-text-size-adjust : 100%;
+ }
+ 
+ body {
+     margin : 0;
+ }
+ 
+ main {
+     display : block;
+ }
+ 
+ h1 {
+     font-size : 2em;
+     margin    : 0.67em 0;
+ }
+ 
+ hr {
+     box-sizing : content-box;
+     height     : 0;
+     overflow   : visible;
+ }
+ 
+ pre {
+     font-family : monospace, monospace;
+     font-size   : 1em;
+ }
+ 
+ a {
+     background-color : transparent;
+ }
+ 
+ abbr[title] {
+     border-bottom   : none;
+     text-decoration : underline;
+     text-decoration : underline dotted;
+ }
+ 
+ b,
+ strong {
+     font-weight : bolder;
+ }
+ 
+ code,
+ kbd,
+ samp {
+     font-family : monospace, monospace;
+     font-size   : 1em;
+ }
+ 
+ small {
+     font-size : 80%;
+ }
+ 
+ sub,
+ sup {
+     font-size      : 75%;
+     line-height    : 0;
+     position       : relative;
+     vertical-align : baseline;
+ }
+ 
+ sub {
+     bottom : -0.25em;
+ }
+ 
+ sup {
+     top : -0.5em;
+ }
+ 
+ img {
+     border-style : none;
+ }
+ 
+ button,
+ input,
+ optgroup,
+ select,
+ textarea {
+     font-family : inherit;
+     font-size   : 100%;
+     line-height : 1.15;
+     margin      : 0;
+ }
+ 
+ button,
+ input {
+     overflow : visible;
+ }
+ 
+ button,
+ select {
+     text-transform : none;
+ }
+ 
+ button,
+ [type="button"],
+ [type="reset"],
+ [type="submit"] {
+     -webkit-appearance : button;
+ }
+ 
+ button::-moz-focus-inner,
+ [type="button"]::-moz-focus-inner,
+ [type="reset"]::-moz-focus-inner,
+ [type="submit"]::-moz-focus-inner {
+     border-style : none;
+     padding      : 0;
+ }
+ 
+ button:-moz-focusring,
+ [type="button"]:-moz-focusring,
+ [type="reset"]:-moz-focusring,
+ [type="submit"]:-moz-focusring {
+     outline : 1px dotted ButtonText;
+ }
+ 
+ fieldset {
+     padding : 0.35em 0.75em 0.625em;
+ }
+ 
+ legend {
+     box-sizing  : border-box;
+     color       : inherit;
+     display     : table;
+     max-width   : 100%;
+     padding     : 0;
+     white-space : normal;
+ }
+ 
+ progress {
+     vertical-align : baseline;
+ }
+ 
+ textarea {
+     overflow : auto;
+ }
+ 
+ [type="checkbox"],
+ [type="radio"] {
+     box-sizing : border-box;
+     padding    : 0;
+ }
+ 
+ [type="number"]::-webkit-inner-spin-button,
+ [type="number"]::-webkit-outer-spin-button {
+     height : auto;
+ }
+ 
+ [type="search"] {
+     -webkit-appearance : textfield;
+     outline-offset     : -2px;
+ }
+ 
+ [type="search"]::-webkit-search-decoration {
+     -webkit-appearance : none;
+ }
+ 
+ ::-webkit-file-upload-button {
+     -webkit-appearance : button;
+     font               : inherit;
+ }
+ 
+ details {
+     display : block;
+ }
+ 
+ summary {
+     display : list-item;
+ }
+ 
+ template {
+     display : none;
+ }
+ 
+ [hidden] {
+     display : none;
+ }
+ 
+ 
+ 
+ /* ===================================================================
+  * # BASE SETUP
+  *
+  *
+  * ------------------------------------------------------------------- */
+ 
+ html {
+     font-size  : var(--base-size);
+     box-sizing : border-box;
+ }
+ 
+ *,
+ *::before,
+ *::after {
+     box-sizing : inherit;
+ }
+ 
+ html,
+ body {
+     height : 100%;
+ }
+ 
+ body {
+     background-color            : var(--color-body);
+     -webkit-overflow-scrolling  : touch;
+     -webkit-text-size-adjust    : 100%;
+     -webkit-tap-highlight-color : rgba(0, 0, 0, 0);
+     -webkit-font-smoothing      : antialiased;
+     -moz-osx-font-smoothing     : grayscale;
+ }
+ 
+ p {
+     font-size      : inherit;
+     text-rendering : optimizeLegibility;
+ }
+ 
+ a {
+     text-decoration : none;
+ }
+ 
+ svg,
+ img,
+ video {
+     max-width : 100%;
+     height    : auto;
+ }
+ 
+ pre {
+     overflow : auto;
+ }
+ 
+ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+     margin  : 0;
+     padding : 0;
+ }
+ 
+ input[type="email"],
+ input[type="number"],
+ input[type="search"],
+ input[type="text"],
+ input[type="tel"],
+ input[type="url"],
+ input[type="password"],
+ textarea {
+     -webkit-appearance : none;
+     -moz-appearance    : none;
+     appearance         : none;
+ }
+ 
+ 
+ 
+ /* ===================================================================
+  * # GRID v4.0.0
+  *
+  *
+  *   -----------------------------------------------------------------
+  * - Grid breakpoints are based on MAXIMUM WIDTH media queries, 
+  *   meaning they apply to that one breakpoint and ALL THOSE BELOW IT.
+  * - Grid columns without a specified width will automatically layout 
+  *   as equal width columns.
+  *
+  * - BLOCK GRID columns(columns inside BLOCK GRID containers) are 
+  *   equally-sized columns define at parent/row level. 
+  *   A BLOCK GRID container's class attribute value begins with "block-".
+  *
+  * ------------------------------------------------------------------- */
+ 
+ /* row 
+  */
+ .row2 {
+     width     : 92%;
+     max-width : var(--width-grid-max);
+     margin    : 0 auto;
+     display   : flex;
+     flex-flow : row wrap;
+ }
+ 
+ .row2 .row2 {
+     width        : auto;
+     max-width    : none;
+     margin-left  : calc(var(--gutter) * -1);
+     margin-right : calc(var(--gutter) * -1);
+ }
+ 
+ /* column
+  */
+ .column {
+     display : block;
+     flex    : 1 1 0%;
+     padding : 0 var(--gutter);
+ }
+ 
+ .collapse>.column,
+ .column.collapse {
+     padding : 0;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* ===================================================================
+  * # BUTTONS
+  *
+  *
+  * ------------------------------------------------------------------- */
+ 
+ .btn,
+ button,
+ input[type="submit"],
+ input[type="reset"],
+ input[type="button"] {
+     --btn-height            : var(--vspace-btn);
+     display                 : inline-block;
+     font-family             : var(--font-1);
+     font-weight             : 600;
+     font-size               : var(--text-xs);
+     text-transform          : uppercase;
+     letter-spacing          : .35em;
+     height                  : var(--btn-height);
+     line-height             : calc(var(--btn-height) - 2px);
+     padding                 : 0 3.6rem;
+     margin                  : 0 0.4rem var(--vspace-0_5) 0;
+     color                   : var(--color-btn-text);
+     text-decoration         : none;
+     text-align              : center;
+     white-space             : nowrap;
+     cursor                  : pointer;
+     transition              : all .3s;
+     background-color        : var(--color-btn);
+     border                  : 1px solid var(--color-btn);
+     -webkit-font-smoothing  : antialiased;
+     -moz-osx-font-smoothing : grayscale;
+ }
+ 
+ .btn:focus,
+ button:focus,
+ input[type="submit"]:focus,
+ input[type="reset"]:focus,
+ input[type="button"]:focus,
+ .btn:hover,
+ button:hover,
+ input[type="submit"]:hover,
+ input[type="reset"]:hover,
+ input[type="button"]:hover {
+     background-color : var(--color-btn-hover);
+     border-color     : var(--color-btn-hover);
+     color            : var(--color-btn-hover-text);
+     outline          : 0;
+ }
+ 
+ 
+ /* button modifiers
+  */
+ .btn.u-fullwidth,
+ button.u-fullwidth {
+     width        : 100%;
+     margin-right : 0;
+ }
+ 
+ .btn--small,
+ button.btn--small {
+     --btn-height : calc(var(--vspace-btn) - 1.6rem);
+ }
+ 
+ .btn--medium,
+ button.btn--medium {
+     --btn-height : calc(var(--vspace-btn) + .8rem);
+ }
+ 
+ .btn--large,
+ button.btn--large {
+     --btn-height : calc(var(--vspace-btn) + 1.6rem);
+ }
+ 
+ .btn--stroke,
+ button.btn--stroke {
+     background : transparent !important;
+     border     : 1px solid var(--color-btn-stroke);
+     color      : var(--color-btn-stroke-text);
+ }
+ 
+ .btn--stroke:focus,
+ button.btn--stroke:focus,
+ .btn--stroke:hover,
+ button.btn--stroke:hover {
+     background : var(--color-btn-stroke-hover) !important;
+     border     : 1px solid var(--color-btn-stroke-hover);
+     color      : var(--color-btn-stroke-hover-text);
+ }
+ 
+ .btn--pill,
+ button.btn--pill {
+     padding-left  : 3.2rem !important;
+     padding-right : 3.2rem !important;
+     border-radius : 1000px !important;
+ }
+ 
+ 
+ 
+ /* ===================================================================
+  * # TABLE
+  *
+  *
+  * ------------------------------------------------------------------- */
+ 
+ table {
+     border-width    : 0;
+     width           : 100%;
+     max-width       : 100%;
+     font-family     : var(--font-1);
+     border-collapse : collapse;
+ }
+ 
+ th,
+ td {
+     padding       : var(--vspace-0_5) 3.2rem calc(var(--vspace-0_5) - 1px);
+     text-align    : left;
+     border-bottom : 1px solid var(--color-border);
+ }
+ 
+ th {
+     padding     : var(--vspace-0_5) 3.2rem;
+     color       : var(--color-text-dark);
+     font-family : var(--font-1);
+     font-weight : 600;
+ }
+ 
+ th:first-child,
+ td:first-child {
+     padding-left : 0;
+ }
+ 
+ th:last-child,
+ td:last-child {
+     padding-right : 0;
+ }
+ 
+ .table-responsive {
+     overflow-x                 : auto;
+     -webkit-overflow-scrolling : touch;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* --------------------------------------------------------------------
+  * ## works portfolio
+  * -------------------------------------------------------------------- */
+ .folio-list {
+     --item-min-height : var(--vspace-4_5);
+     list-style        : none;
+     margin-top        : var(--vspace-4);
+     margin-bottom     : var(--vspace-1);
+     margin-left       : 0;
+ }
+ 
+ .folio-list__item {
+     margin-bottom : var(--vspace-1);
+     position      : relative;
+ }
+ 
+ .folio-list__item-link {
+     display             : block;
+     width               : 100%;
+     padding-left        : calc(5.5 * var(--space));
+     color               : white;
+     transition-duration : .5s;
+     position            : relative;
+ }
+ 
+ .folio-list__item-link:focus,
+ .folio-list__item-link:hover {
+     color   : var(--color-1);
+     outline : 0;
+ }
+ 
+ .folio-list__item-link:focus .folio-list__item-pic::before,
+ .folio-list__item-link:hover .folio-list__item-pic::before {
+     opacity    : 1;
+     visibility : visible;
+ }
+ 
+ .folio-list__item-link:focus .folio-list__item-pic::after,
+ .folio-list__item-link:hover .folio-list__item-pic::after {
+     opacity    : 1;
+     visibility : visible;
+     transform  : scale(1);
+ }
+ 
+ .folio-list__item-link:focus .folio-list__item-text::before,
+ .folio-list__item-link:hover .folio-list__item-text::before {
+     width : 100%;
+ }
+ 
+ .folio-list__item-pic {
+     display  : block;
+     position : absolute;
+     top      : 0;
+     left     : 0;
+ }
+ 
+ .folio-list__item-pic img {
+     vertical-align : bottom;
+     object-fit     : cover;
+     width          : var(--item-min-height);
+     height         : var(--item-min-height);
+     margin         : 0;
+ }
+ 
+ .folio-list__item-pic::before,
+ .folio-list__item-pic::after {
+     transition : all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+ }
+ 
+ .folio-list__item-pic::before {
+     z-index          : 1;
+     content          : "";
+     display          : block;
+     background-color : rgba(255, 255, 255, 0.75);
+     position         : absolute;
+     top              : 0;
+     left             : 0;
+     right            : 0;
+     bottom           : 0;
+     width            : 100%;
+     height           : 100%;
+     opacity          : 0;
+     visibility       : hidden;
+ }
+ 
+ .folio-list__item-pic::after {
+     z-index     : 2;
+     display     : block;
+     content     : "+";
+     font-family : var(--font-1);
+     font-weight : 300;
+     font-size   : 2.2rem;
+     color       : black;
+     text-align  : center;
+     height      : var(--vspace-1);
+     width       : var(--vspace-1);
+     line-height : var(--vspace-1);
+     transform   : scale(0.2);
+     opacity     : 0;
+     visibility  : hidden;
+     position    : absolute;
+     top         : calc(50% - var(--vspace-0_5));
+     left        : calc(50% - var(--vspace-0_5));
+ }
+ 
+ .folio-list__item-text::before,
+ .folio-list__item-title,
+ .folio-list__item-cat {
+     transition : all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+ }
+ 
+ .folio-list__item-text {
+     padding-top : var(--vspace-0_5);
+     border-top  : 1px solid var(--color-border);
+     min-height  : var(--item-min-height);
+     position    : relative;
+ }
+ 
+ .folio-list__item-text::before {
+     content          : "";
+     display          : block;
+     width            : 0;
+     height           : 1px;
+     background-color : var(--color-text-light);
+     position         : absolute;
+     top              : 0;
+     left             : 0;
+ }
+ 
+ .folio-list__item-title {
+     font-family : var(--font-1);
+     font-weight : 500;
+     font-size   : var(--text-lg);
+ }
+ 
+ .folio-list__item-cat {
+     font-size   : var(--text-sm);
+     color       : var(--color-text-light);
+     line-height : var(--vspace-0_75);
+     margin-left : .2rem;
+ }
+ 
+ .folio-list__proj-link {
+     display  : block;
+     height   : var(--vspace-1);
+     width    : var(--vspace-1);
+     position : absolute;
+     top      : .8rem;
+     right    : var(--vspace-0_75);
+ }
+ 
+ .folio-list__proj-link svg {
+     height    : var(--vspace-0_5);
+     width     : var(--vspace-0_5);
+     transform : translate(-50%, -50%) rotate(-45deg);
+     position  : absolute;
+     top       : 50%;
+     left      : 50%;
+ }
+ 
+ .folio-list__proj-link svg path {
+     fill : white;
+ }
+ 
+ .folio-list__proj-link:hover {
+     transform : scale(1.2);
+ }
+
+ /* ------------------------------------------------------------------- 
+ * ## MailtoUI style overrides
+ * ------------------------------------------------------------------- */
+.mailtoui-modal {
+    --mailtoui-modal-box-shadow         : 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08);
+    --mailtoui-modal-head-bgcolor       : var(--color-gray-18);
+    --mailtoui-modal-head-title-color   : white;
+    --mailtoui-modal-body-bgcolor       : var(--color-gray-11);
+    --mailtoui-button-bgcolor           : rgba(255, 255, 255, .04);
+    --mailtoui-button-text-color        : white;
+    --mailtoui-button-bgcolor-hover     : var(--color-1-dark);
+    --mailtoui-button-text-color-hover  : black;
+    --mailtoui-button-text-size         : 16px;
+    --mailtoui-email-address-bgcolor    : var(--color-gray-13);
+    --mailtoui-email-address-text-color : var(--text-color);
+    --border-radius                     : 0;
+    font-family                         : var(--font-1);
+    background-color                    : var(--color-body);
+    color                               : white;
+}
+
+.mailtoui-modal-content {
+    background-color : var(--mailtoui-modal-body-bgcolor);
+    border-radius    : var(--border-radius);
+    box-shadow       : var(--mailtoui-modal-box-shadow);
+}
+
+.mailtoui-modal-content button {
+    font-weight : 400;
+    font-size   : 16px;
+    margin      : 0;
+    padding     : 0;
+}
+
+.mailtoui-modal-head {
+    background-color : var(--mailtoui-modal-head-bgcolor);
+}
+
+.mailtoui-modal-title {
+    font-family : var(--font-1);
+    font-weight : 400;
+    font-size   : 16px;
+    color       : var(--mailtoui-modal-head-title-color);
+}
+
+.mailtoui-modal-close {
+    font        : 0/0 a;
+    text-shadow : none;
+    color       : transparent;
+    font-size   : 32px;
+    font-weight : 300;
+    color       : rgba(255, 255, 255, 0.5);
+}
+
+.mailtoui-modal-close:hover,
+.mailtoui-modal-close:focus {
+    color       : white;
+    font-weight : 300;
+}
+
+.mailtoui-modal-body {
+    background-color : var(--mailtoui-modal-body-bgcolor);
+}
+
+.mailtoui-button-text {
+    font-size      : var(--mailtoui-button-text-size);
+    text-transform : none;
+    letter-spacing : 0;
+}
+
+.mailtoui-button:focus .mailtoui-button-content {
+    background-color : var(--mailtoui-button-bgcolor-hover);
+    color            : var(--mailtoui-button-text-color-hover);
+}
+
+.mailtoui-button-content,
+.mailtoui-button-copy {
+    background-color : var(--mailtoui-button-bgcolor);
+    color            : var(--mailtoui-button-text-color);
+    border-radius    : var(--border-radius);
+    box-shadow       : none;
+}
+
+.mailtoui-button-content:hover,
+.mailtoui-button-content:focus,
+.mailtoui-button-copy:hover,
+.mailtoui-button-copy:focus {
+    background-color : var(--mailtoui-button-bgcolor-hover);
+    color            : var(--mailtoui-button-text-color-hover);
+}
+
+.mailtoui-copy {
+    border-radius : var(--border-radius);
+    box-shadow    : none;
+}
+
+.mailtoui-button-icon-copy {
+    line-height : var(--vspace-1);
+}
+
+.mailtoui-button-copy-clicked,
+.mailtoui-button-copy-clicked:hover,
+.mailtoui-button-copy-clicked:focus {
+    background-color : #1F9D55;
+    color            : white;
+}
+
+.mailtoui-email-address {
+    background-color : var(--mailtoui-email-address-bgcolor);
+    color            : var(--mailtoui-email-address-text-color);
+    font-size        : 16px;
+    line-height      : 1;
+    border-radius    : var(--border-radius);
+}
+
+.mailtoui-brand a {
+    color : rgba(255, 255, 255, 0.12);
+}
+
+.mailtoui-brand a:focus,
+.mailtoui-brand a:hover {
+    font-weight : 300;
+    color       : white;
+}
+ 
+ /* ------------------------------------------------------------------- 
+  * ## modal popup
+  * ------------------------------------------------------------------- */
+ .modal-popup {
+     max-width        : 680px;
+     background-color : white;
+     font-size        : calc(var(--text-size) * 0.9447);
+     line-height      : var(--vspace-0_875);
+     color            : rgba(0, 0, 0, 0.75);
+     overflow-y       : auto;
+     position         : relative;
+ }
+ 
+ .modal-popup img {
+     margin-bottom : var(--vspace-0_75);
+ }
+ 
+ .modal-popup h5 {
+     font-family   : var(--font-1);
+     font-size     : var(--text-size);
+     line-height   : var(--vspace-1);
+     font-weight   : 500;
+     margin-top    : 0;
+     margin-bottom : var(--vspace-0_25);
+     color         : black;
+ }
+ 
+ .modal-popup__desc {
+     padding : 0 var(--vspace-1_25) var(--vspace-0_25);
+ }
+ 
+ .modal-popup__cat {
+     list-style   : none;
+     margin-left  : 0;
+     font-size    : var(--text-sm);
+     line-height  : var(--vspace-0_5);
+     color        : rgba(0, 0, 0, 0.6);
+     padding-left : calc(0.875 * var(--space));
+     position     : relative;
+ }
+ 
+ .modal-popup__cat::before {
+     content             : "";
+     display             : block;
+     height              : calc(0.625 * var(--space));
+     width               : calc(0.625 * var(--space));
+     background-repeat   : no-repeat;
+     background-position : center;
+     background-size     : contain;
+     background-image    : url(../images/icons/icon-tag.svg);
+     position            : absolute;
+     left                : 0;
+     top                 : -0.15em;
+ }
+ 
+ .modal-popup__cat li {
+     display      : inline;
+     padding-left : 0;
+ }
+ 
+ .modal-popup__cat li::after {
+     content : ", ";
+ }
+ 
+ .modal-popup__cat li:last-child::after {
+     display : none;
+ }
+ 
+ .modal-popup__details {
+     background-color : rgba(0, 0, 0, 0.3);
+     font-size        : var(--text-xs);
+     line-height      : var(--vspace-1_25);
+     color            : white;
+     padding          : 0 1.2rem;
+     position         : absolute;
+     top              : var(--vspace-1);
+     left             : var(--vspace-1);
+ }
+ 
+ .modal-popup__details:focus,
+ .modal-popup__details:hover {
+     background-color : var(--color-body);
+     color            : white;
+ }
+
+ @media screen and (max-width: 1200px) {
+    .folio-list__item-title {
+        font-size   : var(--text-md);
+        line-height : var(--vspace-0_875);
+    }
+
+    .folio-list__item-cat {
+        font-size : var(--text-xs);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .folio-list__item-title {
+        font-size   : var(--text-lg);
+        line-height : var(--vspace-1);
+    }
+
+    .folio-list__item-cat {
+        font-size : var(--text-sm);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .s-works {
+        padding-top    : var(--vspace-4);
+        padding-bottom : var(--vspace-3);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .folio-list__item-title {
+        font-size   : var(--text-md);
+        line-height : var(--vspace-0_875);
+    }
+
+    .folio-list__proj-link {
+        right : var(--vspace-0_5);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .folio-list {
+        --item-min-height : var(--vspace-3_5);
+    }
+
+    .folio-list__item {
+        margin-bottom : var(--vspace-0_75);
+    }
+
+    .folio-list__item-link {
+        padding-left : calc(4.25 * var(--space));
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .folio-list .column {
+        flex  : none;
+        width : 50%;
+    }
+
+    .folio-list__item {
+        margin-bottom : 0;
+    }
+
+    .folio-list__item-link {
+        padding-left : 0;
+    }
+
+    .folio-list__item-pic {
+        position : static;
+    }
+
+    .folio-list__item-pic img {
+        max-width : 100%;
+        width     : 100%;
+        height    : auto;
+    }
+
+    .folio-list__item-text,
+    .folio-list__proj-link {
+        display : none;
+    }
+
+    .modal-popup__desc {
+        padding : 0 var(--vspace-1) var(--vspace-0_25);
+    }
+}
