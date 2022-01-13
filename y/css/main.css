@@ -3025,6 +3025,7 @@ html.no-csstransitions .home-content__main {
   background-color: rgba(0, 0, 0, 0.9);
   background-image: url(../images/pattern.jpg);
   background-size: 760px 380px;
+  z-index: -10;
 }
 
 #about::before {
