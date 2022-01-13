@@ -457,7 +457,7 @@
  
  .folio-list__item-link:focus,
  .folio-list__item-link:hover {
-     /* color   : var(--color-1); */
+    color: #2681d6;
      outline : 0;
  }
 
