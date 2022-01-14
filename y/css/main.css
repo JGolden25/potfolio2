@@ -66,6 +66,16 @@ html {
 color:#2681d6;
 }
 
+.fa-link:hover {
+  color:#2681d6;
+  transition: all 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  color:#2681d6;
+  transition: all 0.3s ease-in-out;
+}
+
 .fm-hover { 
   color: rgb(255 255 255 / 60%);
   }
