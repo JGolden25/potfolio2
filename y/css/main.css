@@ -1579,7 +1579,7 @@ body.menu-is-open {
 
 @media only screen and (max-width:800px) {
   .display-1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin-bottom: 4.5rem;
   }
 
@@ -1595,7 +1595,7 @@ body.menu-is-open {
 
 @media only screen and (max-width:700px) {
   .display-1 {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
   }
 
   .subhead {
@@ -1606,7 +1606,7 @@ body.menu-is-open {
 
 @media only screen and (max-width:600px) {
   .display-1 {
-    font-size: 0.8rem;
+    font-size: 1.6rem;
     margin-bottom: 4.2rem;
   }
 
@@ -1614,7 +1614,7 @@ body.menu-is-open {
 
 @media only screen and (max-width:500px) {
   .display-1 {
-    font-size: 0.6rem;
+    font-size: 1.6rem;
   }
 
   .section-header.has-bottom-sep::before {
@@ -1625,7 +1625,7 @@ body.menu-is-open {
 
 @media only screen and (max-width:400px) {
   .display-1 {
-    font-size: 0.4rem;
+    font-size: 1.5rem;
   }
 
   .subhead {
