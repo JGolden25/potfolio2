@@ -62,6 +62,14 @@ html {
   font-size: 10px;
 }
 
+.fm-hover:hover {
+color:#2681d6;
+}
+
+.fm-hover { 
+  color: rgb(255 255 255 / 60%);
+  }
+
 .blog {
   text-decoration: none; 
    color: #ffffff;
