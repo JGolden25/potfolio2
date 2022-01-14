@@ -816,7 +816,7 @@
     padding          : 0 1.2rem;
     position         : absolute;
     top              : 5%;
-    left             : var(--vspace-1_25);
+    left             : var(--vspace-1_5);
 }
 
 .modal-popup__details-2:focus,
