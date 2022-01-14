@@ -80,6 +80,16 @@ color:#2681d6;
   color: rgb(255 255 255 / 60%);
   }
 
+  .box-left-mini .behind_container {
+    background-color: #ff0;
+    position: relative;
+    top: -18px;
+}
+.box-left-mini .behind {
+    display: block;
+    z-index: 3;
+}
+
 .blog {
   text-decoration: none; 
    color: #ffffff;
