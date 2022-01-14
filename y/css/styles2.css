@@ -799,10 +799,10 @@
  
  .modal-popup__details {
      background-color : rgba(0, 0, 0, 0.3);
-     font-size        : var(--text-xs);
+     font-size        : var(--text-s);
      line-height      : var(--vspace-1_25);
      color            : white;
-     padding          : 0 1.2rem;
+     padding          : 0 1.3rem;
      position         : absolute;
      top              : 5%;
      left             : var(--vspace-0);
@@ -810,13 +810,13 @@
 
  .modal-popup__details-2 {
     background-color : rgba(0, 0, 0, 0.3);
-    font-size        : var(--text-xs);
+    font-size        : var(--text-s);
     line-height      : var(--vspace-1_25);
     color            : white;
-    padding          : 0 1.2rem;
+    padding          : 0 1.3rem;
     position         : absolute;
     top              : 5%;
-    left             : var(--vspace-1_5);
+    left             : var(--vspace-1_75);
 }
 
 .modal-popup__details-2:focus,
