@@ -804,9 +804,26 @@
      color            : white;
      padding          : 0 1.2rem;
      position         : absolute;
-     top              : var(--vspace-1);
-     left             : var(--vspace-1);
+     top              : 5%;
+     left             : var(--vspace-0);
  }
+
+ .modal-popup__details-2 {
+    background-color : rgba(0, 0, 0, 0.3);
+    font-size        : var(--text-xs);
+    line-height      : var(--vspace-1_25);
+    color            : white;
+    padding          : 0 1.2rem;
+    position         : absolute;
+    top              : 5%;
+    left             : var(--vspace-1);
+}
+
+.modal-popup__details-2:focus,
+.modal-popup__details-2:hover {
+    background-color : var(--color-body);
+    color            : white;
+}
  
  .modal-popup__details:focus,
  .modal-popup__details:hover {
