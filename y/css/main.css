@@ -71,11 +71,20 @@ color:#2681d6;
   transition: all 0.3s ease-in-out;
 }
 
-.fa-github:hover {
+.iconshover:hover {
   color:#2681d6;
   transition: all 0.3s ease-in-out;
 }
 
+.iconshover2:hover {
+  color:#444343;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-email a:hover {
+  color:#444343;
+  transition: all 0.3s ease-in-out;
+}
 .fm-hover { 
   color: rgb(255 255 255 / 60%);
   }
