@@ -71,6 +71,11 @@ color:#2681d6;
   transition: all 0.3s ease-in-out;
 }
 
+.fa-github:hover {
+  color:#2681d6;
+  transition: all 0.3s ease-in-out;
+}
+
 .iconshover:hover {
   color:#2681d6;
   transition: all 0.3s ease-in-out;
